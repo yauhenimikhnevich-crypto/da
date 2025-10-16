@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#222" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Судоку</h1>
+    <select id="difficulty">
+      <option value="easy">Лёгкий</option>
+      <option value="medium">Средний</option>
+      <option value="hard">Сложный</option>
+    </select>
+    <button id="newGame">Новая игра</button>
+  </header>
+
+  <main id="board"></main>
+
+  <footer>
+    <p>Sudoku PWA — офлайн-приложение</p>
+  </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+</body>
+</html>
